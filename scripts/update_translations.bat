@@ -1,4 +1,4 @@
-cd ..
-cd budget\assets\translations
+@REM cd ..
+@REM cd budget\assets\translations
 python generate-translations.py
 pause

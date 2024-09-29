@@ -1,5 +1,5 @@
-cd ..
-cd budget
+@REM cd ..
+@REM cd budget
 
 start cmd.exe /k firebase deploy
 start cmd.exe /k flutter build appbundle --release
