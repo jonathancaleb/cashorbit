@@ -19,12 +19,14 @@ This project is a starting point for a Flutter application focused on finance ma
 ### Installation
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/yourusername/cashorbit.git
    cd cashorbit
    ```
 
 2. **Install dependencies:**
+
    ```bash
    flutter pub get
    ```
@@ -35,6 +37,7 @@ This project is a starting point for a Flutter application focused on finance ma
    - Download the `google-services.json` (for Android) or `GoogleService-Info.plist` (for iOS) and place it in the appropriate directory.
 
 4. **Run the app:**
+
    ```bash
    flutter run
    ```
@@ -50,6 +53,7 @@ This project is a starting point for a Flutter application focused on finance ma
 ## Usage
 
 Once the app is running, you can:
+
 - Add, edit, or delete transactions.
 - View your financial summary on the dashboard.
 - Set budgets and receive notifications when you exceed them.
@@ -57,6 +61,7 @@ Once the app is running, you can:
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
+
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature/YourFeature`).
 3. Make your changes and commit them (`git commit -m 'Add some feature'`).
