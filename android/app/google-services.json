@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1003214773234",
+    "project_id": "cashorbit-75407",
+    "storage_bucket": "cashorbit-75407.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003214773234:android:c773a2cf24facf8f5ca96b",
+        "android_client_info": {
+          "package_name": "com.example.cashorbit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9AZJcsD53MVLVFSH-AujpxjXs-rC1VA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
