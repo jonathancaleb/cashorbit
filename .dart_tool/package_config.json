@@ -350,6 +350,12 @@
       "languageVersion": "2.15"
     },
     {
+      "name": "implicitly_animated_reorderable_list",
+      "rootUri": "../packages/implicitly_animated_reorderable_list-0.4.2-modified",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "intl",
       "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.19.0",
       "packageUri": "lib/",
@@ -578,6 +584,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "sliding_sheet",
+      "rootUri": "../packages/sliding_sheet-0.5.2-modified",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "source_span",
       "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.0",
       "packageUri": "lib/",
@@ -788,7 +800,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-09-30T11:51:26.511009Z",
+  "generated": "2024-10-01T11:52:29.831701Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///F:/flutter%20sdk/flutter",
