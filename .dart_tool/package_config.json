@@ -134,6 +134,18 @@
       "languageVersion": "3.3"
     },
     {
+      "name": "easy_localization",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/easy_localization-3.0.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "easy_logger",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/easy_logger-0.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "equatable",
       "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/equatable-2.0.5",
       "packageUri": "lib/",
@@ -153,7 +165,7 @@
     },
     {
       "name": "file",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/file-7.0.0",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/file-7.0.1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -266,10 +278,16 @@
       "languageVersion": "2.17"
     },
     {
-      "name": "flutter_plugin_android_lifecycle",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.22",
+      "name": "flutter_localizations",
+      "rootUri": "file:///F:/flutter%20sdk/flutter/packages/flutter_localizations",
       "packageUri": "lib/",
-      "languageVersion": "3.4"
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "flutter_plugin_android_lifecycle",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.23",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
     },
     {
       "name": "flutter_sticky_header",
@@ -303,13 +321,13 @@
     },
     {
       "name": "google_sign_in_android",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/google_sign_in_android-6.1.30",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/google_sign_in_android-6.1.33",
       "packageUri": "lib/",
-      "languageVersion": "3.4"
+      "languageVersion": "3.5"
     },
     {
       "name": "google_sign_in_ios",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/google_sign_in_ios-5.7.7",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/google_sign_in_ios-5.7.8",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
@@ -423,13 +441,13 @@
     },
     {
       "name": "mime",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/mime-1.0.6",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/mime-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "package_info_plus",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/package_info_plus-8.0.2",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/package_info_plus-8.0.3",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
@@ -453,9 +471,9 @@
     },
     {
       "name": "path_provider_android",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_android-2.2.10",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_android-2.2.12",
       "packageUri": "lib/",
-      "languageVersion": "3.4"
+      "languageVersion": "3.5"
     },
     {
       "name": "path_provider_foundation",
@@ -513,13 +531,13 @@
     },
     {
       "name": "share_plus",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/share_plus-10.0.2",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/share_plus-10.0.3",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
     {
       "name": "share_plus_platform_interface",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/share_plus_platform_interface-5.0.0",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/share_plus_platform_interface-5.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -531,13 +549,13 @@
     },
     {
       "name": "shared_preferences_android",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_android-2.3.2",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_android-2.3.3",
       "packageUri": "lib/",
-      "languageVersion": "3.4"
+      "languageVersion": "3.5"
     },
     {
       "name": "shared_preferences_foundation",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_foundation-2.5.2",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_foundation-2.5.3",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
@@ -693,13 +711,13 @@
     },
     {
       "name": "url_launcher",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher-6.3.0",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher-6.3.1",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.3"
     },
     {
       "name": "url_launcher_android",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_android-6.3.10",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/url_launcher_android-6.3.12",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
@@ -771,15 +789,15 @@
     },
     {
       "name": "win32",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/win32-5.5.4",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/win32-5.5.5",
       "packageUri": "lib/",
-      "languageVersion": "3.4"
+      "languageVersion": "3.5"
     },
     {
       "name": "xdg_directories",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/xdg_directories-1.0.4",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/xdg_directories-1.1.0",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.3"
     },
     {
       "name": "xml",
@@ -800,7 +818,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-10-01T11:52:29.831701Z",
+  "generated": "2024-10-10T07:59:42.478554Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///F:/flutter%20sdk/flutter",

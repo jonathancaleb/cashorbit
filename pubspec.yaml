@@ -73,6 +73,7 @@ dependencies:
     path: ./packages/sliding_sheet-0.5.2-modified/
   implicitly_animated_reorderable_list:
     path: ./packages/implicitly_animated_reorderable_list-0.4.2-modified/
+  easy_localization: ^3.0.7
 
 dev_dependencies:
   flutter_test:
