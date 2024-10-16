@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b90a2c8-410f-4570-8a3a-a200a52de3e7" name="Changes" comment="Modified dart variables for database and local storage">
-      <change afterPath="$PROJECT_DIR$/devtools_options.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/database/tables.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/struct/databaseGlobal.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/struct/database_global.dart" afterDir="false" />
-    </list>
+    <list default="true" id="0b90a2c8-410f-4570-8a3a-a200a52de3e7" name="Changes" comment="Initialized sqlite db, firebase added to TO-DO items" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728896828392</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Initialized sqlite db, firebase added to TO-DO items">
+      <option name="closed" value="true" />
+      <created>1728975880761</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728975880761</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -127,6 +128,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Modified dart variables for database and local storage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified dart variables for database and local storage" />
+    <MESSAGE value="Initialized sqlite db, firebase added to TO-DO items" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initialized sqlite db, firebase added to TO-DO items" />
   </component>
 </project>

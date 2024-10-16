@@ -1,2 +1,0 @@
-int schemaVersionGlobal = 1;
-
