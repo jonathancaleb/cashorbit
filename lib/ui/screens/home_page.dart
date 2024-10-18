@@ -1,5 +1,5 @@
-import 'package:cashorbit/widgets/budget_container.dart';
-import 'package:cashorbit/widgets/text_widgets.dart';
+import 'package:cashorbit/ui/components/budget_container.dart';
+import 'package:cashorbit/ui/components/text_widgets.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -69,11 +69,11 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const TextFont(text: "test"),
-            BudgetContainer(
+            const BudgetContainer(
               title: "Budget Name",
-              color: const Color(0x4F6ECA4A),
+              color: Color(0x4F6ECA4A),
               total: 500,
-              spent: 49.1,
+              spent: 210,
             ),
             const Text(
               'You have pushed the button this many times:',

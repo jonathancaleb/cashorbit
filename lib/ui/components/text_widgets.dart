@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../colors.dart';
+import '../../core/utils/colors.dart';
 
 class TextFont extends StatelessWidget {
   final String text;

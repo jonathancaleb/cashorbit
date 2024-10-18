@@ -1,8 +1,8 @@
 import 'package:intl/intl.dart';
 
-import './colors.dart';
+import 'colors.dart';
 import 'package:flutter/material.dart';
-import './widgets/text_widgets.dart';
+import '../../ui/components/text_widgets.dart';
 
 showSnackbar(context, text, Color? textColor, Color? backgroundColor) {
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
