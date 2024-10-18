@@ -240,22 +240,14 @@ class BudgetProgress extends StatelessWidget {
                         borderRadius: BorderRadius.circular(6),
                         color: Colors.white.withOpacity(0.8)),
                   ),
+                  percent > 40 ? percentText : Container(),
                 ],
               ),
             )),
         TodayIndicator(
           percent: todayPercent,
         ),
-        Container(
-            height: 22,
-            child: Padding(
-                padding: const EdgeInsets.only(top: 4.3),
-                child: TextFont(
-                  text: "${percent.toInt()}%",
-                  fontSize: 14,
-                  textAlign: TextAlign.center,
-                  fontWeight: FontWeight.bold,
-                ))),
+        percent <= 40 ? percentText : Container(),
       ],
     );
   }
@@ -300,7 +292,10 @@ class TodayIndicator extends StatelessWidget {
                     decoration: BoxDecoration(
                         borderRadius: const BorderRadius.vertical(
                             bottom: Radius.circular(5)),
-                        color: Theme.of(context).colorScheme.black),
+                        color: Theme.of(context)
+                            .colorScheme
+                            .black
+                            .withOpacity(0.4)),
                   ),
                 ],
               ),
