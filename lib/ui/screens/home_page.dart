@@ -1,3 +1,4 @@
+import 'package:cashorbit/data/models/budget_model.dart';
 import 'package:cashorbit/ui/components/budget_container.dart';
 import 'package:cashorbit/ui/components/text_widgets.dart';
 import 'package:flutter/material.dart';
@@ -69,11 +70,17 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const TextFont(text: "test"),
-            const BudgetContainer(
-              title: "Budget Name",
-              color: Color(0x4F6ECA4A),
-              total: 500,
-              spent: 210,
+            BudgetContainer(
+              budget: Budget(
+                title: "Budget Name",
+                color: const Color(0x4F6ECA4A),
+                total: 500,
+                spent: 210,
+                endDate: DateTime.now(),
+                startDate: DateTime.now(),
+                period: "month",
+                periodLength: 10,
+              ),
             ),
             const Text(
               'You have pushed the button this many times:',

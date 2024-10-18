@@ -1,3 +1,4 @@
+import 'package:cashorbit/data/models/budget_model.dart';
 import 'package:cashorbit/ui/components/text_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:sa3_liquid/liquid/plasma/plasma.dart';
@@ -6,18 +7,9 @@ import '../../core/utils/functions.dart';
 
 /// A widget that displays budget information including title, total, spent amount, and a timeline.
 class BudgetContainer extends StatelessWidget {
-  const BudgetContainer({
-    Key? key,
-    required this.title,
-    required this.color,
-    required this.total,
-    required this.spent,
-  }) : super(key: key);
+  const BudgetContainer({super.key, required this.budget});
 
-  final String title; // Title of the budget
-  final Color color; // Color for the budget display
-  final double total; // Total budget amount
-  final double spent; // Amount spent
+  final Budget budget;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +18,7 @@ class BudgetContainer extends StatelessWidget {
         Container(
           width: double.infinity,
           child: TextFont(
-            text: title,
+            text: budget.title,
             fontWeight: FontWeight.bold,
             fontSize: 25,
             textAlign: TextAlign.left,
@@ -38,7 +30,7 @@ class BudgetContainer extends StatelessWidget {
           children: [
             Container(
               child: TextFont(
-                text: convertToMoney(spent),
+                text: convertToMoney(budget.spent),
                 fontSize: 18,
                 textAlign: TextAlign.left,
                 fontWeight: FontWeight.bold,
@@ -48,7 +40,7 @@ class BudgetContainer extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 3.0),
               child: Container(
                 child: TextFont(
-                  text: " left of ${convertToMoney(total)}",
+                  text: " left of ${convertToMoney(budget.total)}",
                   fontSize: 13,
                   textAlign: TextAlign.left,
                 ),
@@ -57,10 +49,8 @@ class BudgetContainer extends StatelessWidget {
           ],
         ),
         BudgetTimeline(
-            startDate: "Sept 1",
-            endDate: "Oct 1",
-            percent: spent / total * 100,
-            color: color),
+          budget: budget,
+        ),
         Container(
           height: 14,
         ),
@@ -85,7 +75,7 @@ class BudgetContainer extends StatelessWidget {
         decoration:
             BoxDecoration(borderRadius: BorderRadius.circular(15), boxShadow: [
           BoxShadow(
-              color: color,
+              color: budget.color,
               offset: const Offset(0, 4.0),
               blurRadius: 15.0,
               spreadRadius: -5),
@@ -95,7 +85,7 @@ class BudgetContainer extends StatelessWidget {
           child: Stack(
             children: [
               Positioned.fill(
-                child: AnimatedGooBackground(color: color),
+                child: AnimatedGooBackground(color: budget.color),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
@@ -112,7 +102,7 @@ class BudgetContainer extends StatelessWidget {
 
 class AnimatedGooBackground extends StatelessWidget {
   const AnimatedGooBackground({
-    Key? key,
+    super.key,
     required this.color,
   });
 
@@ -146,19 +136,10 @@ class AnimatedGooBackground extends StatelessWidget {
 
 /// A widget that displays a timeline for the budget.
 class BudgetTimeline extends StatelessWidget {
-  BudgetTimeline({
-    Key? key,
-    required this.startDate,
-    required this.endDate,
-    required this.percent,
-    required this.color,
-  }) : super(key: key);
+  const BudgetTimeline({super.key, required this.budget});
 
-  final String startDate; // Start date of the budget period
-  final String endDate; // End date of the budget period
-  final double percent; // Percentage of the budget spent
-  final Color color; // Color for the timeline
-  double todayPercent = 20; // Today's percentage marker
+  final Budget budget;
+  final double todayPercent = 45;
 
   @override
   Widget build(BuildContext context) {
@@ -166,18 +147,18 @@ class BudgetTimeline extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         TextFont(
-          text: startDate,
+          text: budget.startDate.day.toString(),
           fontSize: 12,
         ),
         Expanded(
           child: BudgetProgress(
-            color: this.color,
-            percent: percent,
+            color: budget.color,
+            percent: budget.getPercent(),
             todayPercent: todayPercent,
           ),
         ),
         TextFont(
-          text: endDate,
+          text: budget.endDate.day.toString(),
           fontSize: 12,
         ),
       ],
@@ -255,7 +236,7 @@ class BudgetProgress extends StatelessWidget {
 
 /// A widget that indicates today's budget progress.
 class TodayIndicator extends StatelessWidget {
-  const TodayIndicator({Key? key, required this.percent}) : super(key: key);
+  const TodayIndicator({super.key, required this.percent});
   final double percent; // Today's percentage marker
 
   @override
