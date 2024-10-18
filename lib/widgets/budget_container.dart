@@ -5,7 +5,7 @@ import '../colors.dart';
 import '../functions.dart';
 
 class BudgetContainer extends StatelessWidget {
-  BudgetContainer({
+  const BudgetContainer({
     Key? key,
     required this.title,
     required this.color,
@@ -54,7 +54,6 @@ class BudgetContainer extends StatelessWidget {
             ),
           ],
         ),
-        Container(height: 10),
         BudgetTimeline(
             startDate: "Sept 1",
             endDate: "Oct 1",
@@ -63,7 +62,7 @@ class BudgetContainer extends StatelessWidget {
         Container(
           height: 14,
         ),
-        Center(
+        const Center(
           child: FittedBox(
             fit: BoxFit.fitWidth,
             child: TextFont(
@@ -78,7 +77,7 @@ class BudgetContainer extends StatelessWidget {
     );
     return Container(
         width: double.infinity,
-        margin: EdgeInsets.symmetric(
+        margin: const EdgeInsets.symmetric(
           horizontal: 15.0,
           vertical: 8,
         ),
@@ -86,7 +85,7 @@ class BudgetContainer extends StatelessWidget {
             BoxDecoration(borderRadius: BorderRadius.circular(15), boxShadow: [
           BoxShadow(
               color: color,
-              offset: Offset(0, 4.0),
+              offset: const Offset(0, 4.0),
               blurRadius: 15.0,
               spreadRadius: -5),
         ]),
@@ -98,7 +97,7 @@ class BudgetContainer extends StatelessWidget {
                 child: AnimatedGooBackground(color: color),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 25.0,
                   vertical: 20,
                 ),
@@ -157,16 +156,24 @@ class BudgetTimeline extends StatelessWidget {
   final String endDate;
   final double percent;
   final Color color;
+  double todayPercent = 20;
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         TextFont(
           text: startDate,
           fontSize: 12,
         ),
-        Expanded(child: BudgetProgress(color: color, percent: percent)),
+        Expanded(
+          child: BudgetProgress(
+            color: this.color,
+            percent: percent,
+            todayPercent: todayPercent,
+          ),
+        ),
         TextFont(
           text: endDate,
           fontSize: 12,
@@ -179,23 +186,31 @@ class BudgetTimeline extends StatelessWidget {
 //put the today marker in
 //use proper date time objects
 class BudgetProgress extends StatelessWidget {
-  BudgetProgress({Key? key, required this.color, required this.percent})
+  const BudgetProgress(
+      {Key? key,
+      required this.color,
+      required this.percent,
+      required this.todayPercent})
       : super(key: key);
 
   final Color color;
   final double percent;
+  final double todayPercent;
 
   @override
   Widget build(BuildContext context) {
     return Stack(
+      alignment: Alignment.bottomLeft,
       children: [
         Container(
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(6),
                 color: darken(color, 0.5)),
-            margin: EdgeInsets.symmetric(horizontal: 10),
+            margin: const EdgeInsets.symmetric(horizontal: 8),
             height: 20),
         Container(
+            margin: const EdgeInsets.symmetric(horizontal: 8),
+            height: 20,
             child: FractionallySizedBox(
               heightFactor: 1,
               widthFactor: percent / 100,
@@ -214,19 +229,70 @@ class BudgetProgress extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-            margin: EdgeInsets.symmetric(horizontal: 10),
-            height: 20),
-        Container(
-            child: Center(
-                child: TextFont(
-              text: percent.toInt().toString() + "%",
-              fontSize: 14,
-              textAlign: TextAlign.center,
-              fontWeight: FontWeight.bold,
             )),
-            height: 22),
+        TodayIndicator(
+          percent: todayPercent,
+        ),
+        Container(
+            height: 22,
+            child: Padding(
+                padding: const EdgeInsets.only(top: 4.3),
+                child: TextFont(
+                  text: "${percent.toInt()}%",
+                  fontSize: 14,
+                  textAlign: TextAlign.center,
+                  fontWeight: FontWeight.bold,
+                ))),
       ],
+    );
+  }
+}
+
+class TodayIndicator extends StatelessWidget {
+  const TodayIndicator({Key? key, required this.percent}) : super(key: key);
+  final double percent;
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: FractionalOffset(percent / 100, 0),
+      child: Container(
+        child: Container(
+          width: 20,
+          height: 39,
+          child: OverflowBox(
+            maxWidth: 500,
+            child: SizedBox(
+              width: 38,
+              child: Column(
+                children: [
+                  Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(6),
+                          color: Theme.of(context).colorScheme.black),
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                            top: 4, right: 5, left: 5, bottom: 3),
+                        child: TextFont(
+                          textAlign: TextAlign.center,
+                          text: "Today",
+                          fontSize: 9,
+                          textColor: Theme.of(context).colorScheme.white,
+                        ),
+                      )),
+                  Container(
+                    width: 3,
+                    height: 21,
+                    decoration: BoxDecoration(
+                        borderRadius: const BorderRadius.vertical(
+                            bottom: Radius.circular(5)),
+                        color: Theme.of(context).colorScheme.black),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
