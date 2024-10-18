@@ -1,3 +1,4 @@
+import 'package:cashorbit/routes/fab.dart';
 import 'package:cashorbit/ui/screens/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,12 @@ class MyApp extends StatelessWidget {
         /// The primary color of the application.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: Scaffold(
+        body: MyHomePage(
+          title: "test",
+        ),
+        floatingActionButton: const Fab(openPage: OpenTestPage()),
+      ),
     );
   }
 }

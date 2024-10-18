@@ -1,4 +1,5 @@
 import 'package:cashorbit/data/models/budget_model.dart';
+import 'package:cashorbit/routes/fade_in.dart';
 import 'package:cashorbit/ui/components/text_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:sa3_liquid/liquid/plasma/plasma.dart';
@@ -225,9 +226,10 @@ class BudgetProgress extends StatelessWidget {
                 ],
               ),
             )),
-        TodayIndicator(
+        FadeIn(
+            child: TodayIndicator(
           percent: todayPercent,
-        ),
+        )),
         percent <= 40 ? percentText : Container(),
       ],
     );
