@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b90a2c8-410f-4570-8a3a-a200a52de3e7" name="Changes" comment="Initialized sqlite db, firebase added to TO-DO items" />
+    <list default="true" id="0b90a2c8-410f-4570-8a3a-a200a52de3e7" name="Changes" comment="Initialized sqlite db, firebase added to TO-DO items">
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/colors.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/functions.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/functions.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/home_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/widgets/budget_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/budget_container.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +78,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Flutter.main.dart.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
@@ -78,6 +86,7 @@
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
+    "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Code Universe/Flutter/cashorbit",
     "show.migrate.to.gradle.popup": "false"

@@ -1,8 +1,9 @@
+import 'package:cashorbit/widgets/budget_container.dart';
 import 'package:cashorbit/widgets/text_widgets.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -67,8 +68,14 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            TextFont(text: "test"),
-            Text(
+            const TextFont(text: "test"),
+            BudgetContainer(
+              title: "Budget Name",
+              color: const Color(0x4F6ECA4A),
+              total: 500,
+              spent: 49.1,
+            ),
+            const Text(
               'You have pushed the button this many times:',
             ),
             Text(
@@ -81,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

@@ -1,3 +1,5 @@
+import 'package:intl/intl.dart';
+
 import './colors.dart';
 import 'package:flutter/material.dart';
 import './widgets/text_widgets.dart';
@@ -21,6 +23,18 @@ extension CapExtension on String {
       .split(" ")
       .map((str) => str.capitalizeFirst)
       .join(" ");
+}
+
+String convertToMoney(double amount) {
+  String currencyType = "\$";
+  final currency = NumberFormat("#,##0.00", "en_US");
+  String formatOutput = currency.format(amount);
+  if (formatOutput.substring(formatOutput.length - 2) == "00") {
+    return currencyType +
+        formatOutput.replaceRange(
+            formatOutput.length - 3, formatOutput.length, '');
+  }
+  return currencyType + currency.format(amount);
 }
 
 getMonth(currentMonth) {
