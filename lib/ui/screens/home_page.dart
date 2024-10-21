@@ -6,14 +6,14 @@ import 'package:cashorbit/ui/components/transaction_entry.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
-  MyHomePageState createState() => MyHomePageState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
-class MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -32,11 +32,11 @@ class MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const TextFont(text: "test"),
+            TextFont(text: "test"),
             BudgetContainer(
               budget: Budget(
                 title: "Budget Name",
-                color: const Color(0x4F6ECA4A),
+                color: Color(0x4F6ECA4A),
                 total: 500,
                 spent: 210,
                 endDate: DateTime.now(),
@@ -45,17 +45,29 @@ class MyHomePageState extends State<MyHomePage> {
                 periodLength: 10,
               ),
             ),
-            const TransactionEntry(openPage: OpenTestPage()),
-            const Text(
-              'You have pushed the button this many times:',
+            TransactionEntry(
+              openPage: OpenTestPage(),
+              transaction: Transaction(
+                  title: "Uber",
+                  amount: 50,
+                  categoryID: "id",
+                  date: DateTime.now(),
+                  note: "this is a transaction",
+                  tagIDs: ["id1", "id2"]),
+            ),
+            TransactionEntry(
+              openPage: OpenTestPage(),
+              transaction: Transaction(
+                  title: "",
+                  amount: 50,
+                  categoryID: "id",
+                  date: DateTime.now(),
+                  note: "this is a transaction",
+                  tagIDs: ["id1", "id2"]),
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            ElevatedButton(
-              onPressed: _incrementCounter, // Call the increment method here
-              child: const Text('Increment Counter'),
             ),
           ],
         ),

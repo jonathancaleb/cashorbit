@@ -1,3 +1,4 @@
+import 'package:cashorbit/data/models/transaction_Category.dart';
 import 'package:intl/intl.dart';
 
 import 'colors.dart';
@@ -35,6 +36,14 @@ String convertToMoney(double amount) {
             formatOutput.length - 3, formatOutput.length, '');
   }
   return currencyType + currency.format(amount);
+}
+
+TransactionCategory findCategory(String id) {
+  return TransactionCategory(
+      title: "Food and Drink",
+      icon: "cutlery.png",
+      id: "id",
+      color: Colors.orange);
 }
 
 getMonth(currentMonth) {
