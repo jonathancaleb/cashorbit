@@ -1,4 +1,5 @@
 import 'package:cashorbit/data/models/budget_model.dart';
+import 'package:cashorbit/data/models/transaction_model.dart';
 import 'package:cashorbit/routes/fab.dart';
 import 'package:cashorbit/ui/components/budget_container.dart';
 import 'package:cashorbit/ui/components/text_widgets.dart';
@@ -32,11 +33,11 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            TextFont(text: "test"),
+            const TextFont(text: "test"),
             BudgetContainer(
               budget: Budget(
                 title: "Budget Name",
-                color: Color(0x4F6ECA4A),
+                color: const Color(0x4F6ECA4A),
                 total: 500,
                 spent: 210,
                 endDate: DateTime.now(),
@@ -46,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             TransactionEntry(
-              openPage: OpenTestPage(),
+              openPage: const OpenTestPage(),
               transaction: Transaction(
                   title: "Uber",
                   amount: 50,
@@ -56,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   tagIDs: ["id1", "id2"]),
             ),
             TransactionEntry(
-              openPage: OpenTestPage(),
+              openPage: const OpenTestPage(),
               transaction: Transaction(
                   title: "",
                   amount: 50,
