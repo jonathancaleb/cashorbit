@@ -1,5 +1,6 @@
 import 'package:cashorbit/core/utils/colors.dart';
 import 'package:cashorbit/routes/fab.dart';
+import 'package:cashorbit/ui/screens/add_transaction_page.dart';
 import 'package:cashorbit/ui/screens/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -42,11 +43,14 @@ class MyApp extends StatelessWidget {
             .copyWith(secondary: Theme.of(context).colorScheme.accentColor),
       ),
       themeMode: ThemeMode.system,
-      home: Scaffold(
+      home: const Scaffold(
         body: MyHomePage(
           title: "test",
         ),
-        floatingActionButton: const Fab(openPage: OpenTestPage()),
+        floatingActionButton: Fab(
+            openPage: AddTransactionPage(
+          title: "",
+        )),
       ),
     );
   }

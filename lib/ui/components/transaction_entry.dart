@@ -56,17 +56,28 @@ class TransactionEntry extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            transaction.title == ""
+                            transaction.title != ""
+                                ? TextFont(
+                                    text: transaction.title,
+                                    fontSize: 20,
+                                  )
+                                : Container(),
+                            transaction.title == "" &&
+                                    transaction.tagIDs.length > 0
                                 ? TagIcon(
                                     tag: TransactionTag(
                                         title: "test",
                                         id: "test",
                                         categoryID: "id"),
                                     size: 16)
-                                : TextFont(
-                                    text: transaction.title,
+                                : Container(),
+                            transaction.title == "" &&
+                                    transaction.tagIDs.length == 0
+                                ? TextFont(
+                                    text: category.title,
                                     fontSize: 20,
-                                  ),
+                                  )
+                                : Container(),
                             transaction.title == "" && transaction.note != ""
                                 ? Container(height: 4)
                                 : Container(),
@@ -81,14 +92,15 @@ class TransactionEntry extends StatelessWidget {
                                 ? Container()
                                 : Container(height: 4),
                             //TODO loop through all tags relating to this entry
-                            transaction.title == ""
-                                ? Container()
-                                : TagIcon(
+                            transaction.title != "" &&
+                                    transaction.tagIDs.length > 0
+                                ? TagIcon(
                                     tag: TransactionTag(
                                         title: "test",
                                         id: "test",
                                         categoryID: "id"),
                                     size: 12)
+                                : Container()
                           ],
                         ),
                       ),

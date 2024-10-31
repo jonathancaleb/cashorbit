@@ -2,6 +2,7 @@ import 'package:cashorbit/data/models/budget_model.dart';
 import 'package:cashorbit/data/models/transaction_model.dart';
 import 'package:cashorbit/routes/fab.dart';
 import 'package:cashorbit/ui/components/budget_container.dart';
+import 'package:cashorbit/ui/components/button.dart';
 import 'package:cashorbit/ui/components/pie_chart.dart';
 import 'package:cashorbit/ui/components/text_input.dart';
 import 'package:cashorbit/ui/components/text_widgets.dart';
@@ -22,14 +23,24 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {});
   }
 
+  final scrollController = ScrollController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScrollView(
+        controller: scrollController,
         slivers: [
           SliverList(
             delegate: SliverChildListDelegate(
               [
+                Container(height: 100),
+                Button(
+                  label: "button",
+                  width: 120,
+                  height: 40,
+                  onTap: () {},
+                ),
                 Container(height: 100),
                 Container(
                     width: 200,
@@ -115,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         categoryID: "id",
                         date: DateTime.now(),
                         note: "this is a transaction",
-                        tagIDs: ["id1", "id2"],
+                        tagIDs: ["id1"],
                       ),
                     );
                   },
