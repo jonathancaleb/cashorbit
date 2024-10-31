@@ -10,36 +10,56 @@ class TextFont extends StatelessWidget {
   final int? maxLines;
 
   const TextFont(
-      {Key? key,
+      {super.key,
       required this.text,
       this.fontSize = 20,
       this.fontWeight = FontWeight.normal,
       this.textAlign = TextAlign.left,
       this.textColor,
-      this.maxLines = null})
-      : super(key: key);
+      this.maxLines});
 
   @override
   Widget build(BuildContext context) {
-    var finalTextColor;
-    if (this.textColor == null) {
+    Color? finalTextColor;
+    if (textColor == null) {
       finalTextColor = Theme.of(context).colorScheme.black;
     } else {
       finalTextColor = textColor;
     }
     return Text(
-      '$text',
+      text,
       maxLines: maxLines,
       textAlign: textAlign,
       overflow: TextOverflow.ellipsis,
       style: TextStyle(
-          fontWeight: this.fontWeight,
-          fontSize: this.fontSize,
+          fontWeight: fontWeight,
+          fontSize: fontSize,
           fontFamily: 'Avenir',
           color: finalTextColor,
           decoration: TextDecoration.underline,
           decorationStyle: TextDecorationStyle.double,
-          decorationColor: Color(0x00FFFFFF)),
+          decorationColor: const Color(0x00FFFFFF)),
+    );
+  }
+}
+
+class TextHeader extends StatelessWidget {
+  const TextHeader({required this.text, super.key});
+  final String text;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      color: Theme.of(context).canvasColor,
+      child: Padding(
+        padding:
+            const EdgeInsets.only(left: 18.0, right: 18, top: 10, bottom: 5),
+        child: TextFont(
+          text: text,
+          fontSize: 33,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
     );
   }
 }

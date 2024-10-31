@@ -291,9 +291,9 @@
     },
     {
       "name": "flutter_sticky_header",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_sticky_header-0.6.5",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_sticky_header-0.7.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     },
     {
       "name": "flutter_test",
@@ -765,9 +765,9 @@
     },
     {
       "name": "value_layout_builder",
-      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/value_layout_builder-0.3.1",
+      "rootUri": "file:///C:/Users/caleb/AppData/Local/Pub/Cache/hosted/pub.dev/value_layout_builder-0.4.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     },
     {
       "name": "vector_math",
@@ -818,7 +818,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-10-18T08:43:36.920695Z",
+  "generated": "2024-10-31T12:58:26.755877Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///F:/flutter%20sdk/flutter",
