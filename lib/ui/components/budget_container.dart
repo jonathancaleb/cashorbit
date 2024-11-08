@@ -170,11 +170,11 @@ class BudgetTimeline extends StatelessWidget {
 /// A widget that displays the progress of the budget.
 class BudgetProgress extends StatelessWidget {
   const BudgetProgress({
-    Key? key,
+    super.key,
     required this.color,
     required this.percent,
     required this.todayPercent,
-  }) : super(key: key);
+  });
 
   final Color color; // Color for the progress bar
   final double percent; // Percentage of the budget spent

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NavBar extends StatefulWidget {
-  NavBar({Key? key, required this.title}) : super(key: key);
+  const NavBar({super.key, required this.title});
 
   final String title;
 

@@ -3,16 +3,15 @@ import 'package:cashorbit/ui/components/text_widgets.dart';
 import 'package:flutter/material.dart';
 
 class Button extends StatefulWidget {
-  Button(
-      {Key? key,
+  const Button(
+      {super.key,
       required this.label,
       required this.width,
       required this.height,
       this.fontSize,
       this.fractionScaleHeight,
       this.fractionScaleWidth,
-      required this.onTap})
-      : super(key: key);
+      required this.onTap});
   final String label;
   final double width;
   final double height;
