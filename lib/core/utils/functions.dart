@@ -1,4 +1,4 @@
-import 'package:cashorbit/data/models/transaction_Category.dart';
+import 'package:cashorbit/data/models/transaction_category.dart';
 import 'package:intl/intl.dart';
 
 import 'colors.dart';

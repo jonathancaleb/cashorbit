@@ -1,7 +1,7 @@
 import 'package:animations/animations.dart';
 import 'package:cashorbit/core/utils/colors.dart';
 import 'package:cashorbit/core/utils/functions.dart';
-import 'package:cashorbit/data/models/transaction_Category.dart';
+import 'package:cashorbit/data/models/transaction_category.dart';
 import 'package:cashorbit/data/models/transaction_model.dart';
 import 'package:cashorbit/data/models/transaction_tag.dart';
 import 'package:cashorbit/ui/components/text_widgets.dart';
