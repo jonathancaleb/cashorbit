@@ -63,7 +63,7 @@ class TransactionEntry extends StatelessWidget {
                                   )
                                 : Container(),
                             transaction.title == "" &&
-                                    transaction.tagIDs.length > 0
+                                    transaction.tagIDs.isNotEmpty
                                 ? TagIcon(
                                     tag: TransactionTag(
                                         title: "test",
@@ -72,7 +72,7 @@ class TransactionEntry extends StatelessWidget {
                                     size: 16)
                                 : Container(),
                             transaction.title == "" &&
-                                    transaction.tagIDs.length == 0
+                                    transaction.tagIDs.isEmpty
                                 ? TextFont(
                                     text: category.title,
                                     fontSize: 20,
@@ -93,7 +93,7 @@ class TransactionEntry extends StatelessWidget {
                                 : Container(height: 4),
                             //TODO loop through all tags relating to this entry
                             transaction.title != "" &&
-                                    transaction.tagIDs.length > 0
+                                    transaction.tagIDs.isNotEmpty
                                 ? TagIcon(
                                     tag: TransactionTag(
                                         title: "test",
@@ -124,8 +124,7 @@ class TransactionEntry extends StatelessWidget {
 }
 
 class CategoryIcon extends StatelessWidget {
-  const CategoryIcon({Key? key, required this.category, required this.size})
-      : super(key: key);
+  const CategoryIcon({super.key, required this.category, required this.size});
 
   final TransactionCategory category;
   final double size;
@@ -138,7 +137,7 @@ class CategoryIcon extends StatelessWidget {
       decoration: BoxDecoration(shape: BoxShape.circle, color: category.color),
       child: Center(
         child: Image(
-          image: AssetImage("../assets/icons/categories/" + category.icon),
+          image: AssetImage("../assets/icons/categories/${category.icon}"),
           width: size * 0.5,
         ),
       ),
@@ -162,13 +161,13 @@ class TagIcon extends StatelessWidget {
       ),
       child: Padding(
         padding: EdgeInsets.only(
-            top: 5.5 * this.size / 14,
-            right: 10 * this.size / 14,
-            left: 10 * this.size / 14,
-            bottom: 4 * this.size / 14),
+            top: 5.5 * size / 14,
+            right: 10 * size / 14,
+            left: 10 * size / 14,
+            bottom: 4 * size / 14),
         child: TextFont(
           text: "My Text",
-          fontSize: this.size,
+          fontSize: size,
         ),
       ),
     );
