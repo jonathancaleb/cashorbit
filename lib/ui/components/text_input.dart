@@ -24,7 +24,7 @@ class TextInput extends StatelessWidget {
           fontSize: 18,
         ),
         cursorColor: Theme.of(context).colorScheme.accentColorHeavy,
-        decoration: new InputDecoration(
+        decoration: InputDecoration(
           contentPadding:
               const EdgeInsets.only(left: 10, right: 10, top: 15, bottom: 10),
           hintText: labelText,

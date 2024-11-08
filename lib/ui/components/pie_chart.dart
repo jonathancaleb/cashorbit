@@ -133,10 +133,9 @@ class _Badge extends StatelessWidget {
 
   const _Badge(
     this.svgAsset, {
-    Key? key,
     required this.size,
     required this.borderColor,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

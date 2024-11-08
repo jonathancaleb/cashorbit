@@ -5,6 +5,7 @@ import 'package:cashorbit/data/models/transaction_category.dart';
 import 'package:cashorbit/data/models/transaction_model.dart';
 import 'package:cashorbit/data/models/transaction_tag.dart';
 import 'package:cashorbit/ui/components/text_widgets.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -26,7 +27,9 @@ class TransactionEntry extends StatelessWidget {
         return openPage;
       },
       onClosed: () {
-        print("hello");
+        if (kDebugMode) {
+          print("hello");
+        }
       }(),
       tappable: false,
       closedShape: const RoundedRectangleBorder(),
